@@ -3,26 +3,13 @@ package co.dijam.michael.project0;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-
-    @BindView(R.id.popularMoviesButton)
-    Button popularMoviesButton;
-    @BindView(R.id.stockHawkButton)
-    Button stockHawkButton;
-    @BindView(R.id.buildItBiggerButton)
-    Button buildItBiggerButton;
-    @BindView(R.id.makeYourAppMaterialButton)
-    Button makeYourAppMaterialButton;
-    @BindView(R.id.goUbiquitousButton)
-    Button goUbiquitousButton;
-    @BindView(R.id.capstoneButton)
-    Button capstoneButton;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +22,27 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.popularMoviesButton:
+                showToast(R.string.popular_movies);
                 break;
             case R.id.stockHawkButton:
+                showToast(R.string.stock_hawk);
                 break;
             case R.id.buildItBiggerButton:
+                showToast(R.string.build_it_bigger);
                 break;
             case R.id.makeYourAppMaterialButton:
+                showToast(R.string.make_your_app_material);
                 break;
             case R.id.goUbiquitousButton:
+                showToast(R.string.go_ubiquitous);
                 break;
             case R.id.capstoneButton:
+                showToast(R.string.capstone_my_own_app);
                 break;
         }
+    }
+
+    private void showToast(int appNameStringId) {
+        Toast.makeText(MainActivity.this, getString(R.string.this_button_will_launch) + getString(appNameStringId), Toast.LENGTH_SHORT).show();
     }
 }
