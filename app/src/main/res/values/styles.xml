@@ -22,6 +22,7 @@
 
     <style name="capstone_button" parent="button">
         <item name="android:background">@color/buttonBackgroundCapstone</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
     </style>
 
 </resources>
