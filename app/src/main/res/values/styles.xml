@@ -8,11 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="project_button">
+    <style name="button">
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/buttonBackgroundProject</item>
         <item name="android:textColor">@color/buttonText</item>
+    </style>
+
+    <style name="project_button" parent="button">
+        <item name="android:background">@color/buttonBackgroundProject</item>
+    </style>
+
+    <style name="capstone_button" parent="button">
+        <item name="android:background">@color/buttonBackgroundCapstone</item>
     </style>
 
 </resources>

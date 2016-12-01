@@ -44,6 +44,6 @@
     <Button
         android:text="@string/capstone_my_own_app"
         android:id="@+id/capstoneButton"
-        style="@style/project_button" />
+        style="@style/capstone_button" />
 
 </LinearLayout>
